@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+    
+    
+    
+    
+   <!-- <link href='http://fonts.googleapis.com/css?family=Ranga' rel='stylesheet'  type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'  type='text/css'>
+
+    
+    {% assets "css_all" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets  %}
+    
+   
+    
+    
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+
+
+    
+    
+
+<nav class="navbar navbar-expand-lg   navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand mr-auto" href="#">Movies <span> Inc </span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav ml-auto">
+        
+      <li class="nav-item">
+        <a class="nav-link" href="/">Top Ten</a>
+      </li>
+      
+        
+           
+      <li class="nav-item">
+        <a class="nav-link" href="/">recommendation</a>
+      </li>
+        
+
+      
+    
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="recommended">Visualization<span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+    
+      
+    
+      
+     
+    </ul>
+    
+    
+    
+    
+    
+    
+  </div>
+</nav>
+    
+    
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    
+    
+      
+    {% assets "js_all" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets  %}
+    
+  
+    
+<!-- <form action="/recommended" method="post">
+
+<input type="text" name="movie_name" placeholder="movie name"/>
+
+<input type="submit" value="login"/>
+
+</form>
+
+<h2>  </h2> -->
+
+
+    
+  <section class="our_vis text-center">
+ <div class="recommend">     
+ <div class="container text-center">
+    
+  
+     
+       
+     <br/><br/>
+ 
+     <h1 style="color:white;"> Top movies out of all </h1>
+     
+      <img src="{{ url_for('static',filename='vs/1.png')}}" style="height:626px;  opacity: 1.0;" class="d-block w-100" alt="web development">
+
+
+   <br/><br/>
+ 
+     <h1 style="color:white;"> The revnue of movies </h1>
+     
+      <img src="{{ url_for('static',filename='vs/rev.png')}}" style="  opacity: 1.0;" class="d-block w-100" alt="web development">
+
+
+   <br/><br/>
+ 
+     <h1 style="color:white;"> 2009 best year </h1>
+     
+      <img src="{{ url_for('static',filename='vs/2009.png')}}" style="  opacity: 1.0;" class="d-block w-100" alt="web development">
+
+
+  <br/><br/>
+ 
+     <h1 style="color:white;"> 2009 best cast </h1>
+     
+      <img src="{{ url_for('static',filename='vs/cast.png')}}" style="  opacity: 1.0;" class="d-block w-100" alt="web development">
+
+     
+     
+  </div>   
+ </div>
+    
+</section>
+</body>
+    
+   
+    
+</html>    
+
+
+
+
+
+

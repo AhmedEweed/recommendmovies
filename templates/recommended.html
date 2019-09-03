@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+    
+    
+    
+    
+   <!-- <link href='http://fonts.googleapis.com/css?family=Ranga' rel='stylesheet'  type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'  type='text/css'>
+
+    
+    {% assets "css_all" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets  %}
+    
+   
+    
+    
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+
+
+    
+    
+
+<nav class="navbar navbar-expand-lg   navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand mr-auto" href="#">Movies <span> Inc </span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav ml-auto">
+        
+      <li class="nav-item">
+        <a class="nav-link" href="/">Top Ten</a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="recommended">Recommendation<span class="sr-only">(current)</span></a>
+      </li>
+      
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="visualization">Visualization</a>
+      </li>
+      
+      
+    
+      
+    
+      
+     
+    </ul>
+    
+    
+    
+    
+    
+    
+  </div>
+</nav>
+    
+    
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    
+    
+      
+    {% assets "js_all" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets  %}
+    
+  
+    
+<!-- <form action="/recommended" method="post">
+
+<input type="text" name="movie_name" placeholder="movie name"/>
+
+<input type="submit" value="login"/>
+
+</form>
+
+<h2>  </h2> -->
+
+
+    
+  <section class="our_recommendation text-center">
+ <div class="recommend">     
+ <div class="container text-center">
+     <br/>
+  <h1>Keep in touch</h1>
+  <p class="lead">Search For the Movies that like your best movie</p>
+  
+     
+     <div class="re_form">
+     
+  <form class="form-inline" action="/recommended" method="post">
+      <center>
+      <input type="text" class="form-control form-control-lg"  placeholder="Movie Name" name="movie_name" required/>
+          <input type="number" class="form-control form-control-lg col-xs-4"  placeholder="Recommended Number" name="Rec_num" min="1" max="50" required/>
+      <input class="btn btn-danger btn-lg" type="submit" value="Check"/>
+      </center>
+  </form>
+         <br/><br/><br/>
+       
+<!-- <h1>movies recommended {{n}}</h1>   -->
+ 
+  {%  if(request.method == 'POST'): %}
+           <table class="table table-striped" style="color:white;  font-weight: bold;" border=1>
+        <thead class="black white-text">
+         <tr>
+           <th scope="col">Order</th>
+          <th scope="col">Movie Name</th>
+         </tr>
+        </thead>
+               <tbody>
+               
+           {% for x in n %}
+                   <tr>
+                       <td>{{loop.index}}</td>
+         <td> {{x}}  </td>
+             </tr>
+              
+           {% endfor %}
+               
+               </tbody>
+         </table>
+       {% endif %}
+ 
+   
+ 
+     
+
+
+     
+ </div>
+    
+</section>
+</body>
+    
+   
+    
+</html>    
+
+
+
+
+
+
